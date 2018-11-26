@@ -8,15 +8,13 @@ module.exports = () => {
     mode: "production",
     target: "web",
 
-    entry: {
-      app: path.resolve(__dirname, "index.jsx")
-    },
+    entry: path.resolve(__dirname, "index.jsx"),
 
     output: {
       path: path.resolve(__dirname, "dist"),
-      filename: "js/[name].[chunkhash:8].js",
-      chunkFilename: "js/[name].[chunkhash:8].js",
-      publicPath: "/"
+      filename: "app.js",
+      chunkFilename: "app.js",
+      publicPath: "/cuke-ui-landing"
     },
 
     module: {
@@ -33,28 +31,44 @@ module.exports = () => {
         {
           test: /\.less$/,
           use:
-            [{ loader: "style-loader" },
+          [
+            { loader: "style-loader" }, //loader 倒序执行  先执行 less-loader
             {
               loader: "css-loader",
               options: {
                 javascriptEnabled: true,
                 minimize: false,
-                sourceMap: true
+                sourceMap: false
               }
-            }]
+            },
+            {
+              loader: "postcss-loader",
+              options: { javascriptEnabled: true, sourceMap: false }
+            }, //自动加前缀
+            {
+              loader: "less-loader",
+              options: { javascriptEnabled: true, sourceMap: false }
+            }
+          ]
         },
         {
           test: /\.css$/,
           use:
-            [{ loader: "style-loader" },
+          [
+            { loader: "style-loader" },
             {
               loader: "css-loader",
               options: {
                 javascriptEnabled: true,
-                minimize: false,
-                sourceMap: true
+                minimize: true,
+                sourceMap: false
               }
-            }]
+            },
+            {
+              loader: "postcss-loader",
+              options: { javascriptEnabled: true, sourceMap: false }
+            }
+          ]
         },
         {
           test: /\.(jpg|jpeg|png|gif|cur|ico)$/,
