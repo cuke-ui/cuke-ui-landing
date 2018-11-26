@@ -1,6 +1,5 @@
 const path = require("path");
 const webpack = require("webpack");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = () => {
 
@@ -106,12 +105,6 @@ module.exports = () => {
       new webpack.HashedModuleIdsPlugin(),
       new webpack.LoaderOptionsPlugin({
         minimize: true
-      }),
-      new HtmlWebpackPlugin({
-        title: "🥒 CUKE Ui : 一个即插即用的 React UI 库",
-        filename: "index.html",
-        template: path.resolve(__dirname, "index.html"),
-        hash: true
       })
     ]
   };
