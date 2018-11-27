@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'antd';
 import QueueAnim from 'rc-queue-anim';
 import Texty from 'rc-texty';
 import 'rc-texty/assets/index.css';
@@ -12,7 +13,11 @@ class Banner extends React.PureComponent {
     const children = dataSource.textWrapper.children.map((item) => {
       const { name, texty, ...$item } = item;
       if (name === 'button') {
-        return item.children
+        return (
+          <Button type="primary" key={name} {...$item} onClick={()=> location.href = "https://cuke-ui.github.io/cuke-ui/"}>
+            {item.children}
+          </Button>
+        );
       }
 
       return (
