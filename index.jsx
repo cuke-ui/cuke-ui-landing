@@ -1,6 +1,7 @@
 /* eslint no-undef: 0 */
 /* eslint arrow-parens: 0 */
 import React from 'react';
+import ReactDOM from 'react-dom'
 import { enquireScreen } from 'enquire-js';
 
 import Nav2 from './Nav2';
@@ -91,3 +92,5 @@ export default class Home extends React.Component {
     );
   }
 }
+
+ReactDOM.render(<Home/>, document.getElementById('root'))
