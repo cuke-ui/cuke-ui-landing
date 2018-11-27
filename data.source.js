@@ -71,7 +71,11 @@ export const Banner30DataSource = {
         name: 'button',
         className: 'banner3-button joyf3fa0ly-editor_css',
         children: (
-          <a className="banner3-button joyf3fa0ly-editor_css" href="https://cuke-ui.github.io/cuke-ui/" style={{color:"#fff"}}>开始使用</a>
+          <span>
+          <p>
+            <a href="https://cuke-ui.github.io/cuke-ui/" style={{color:"#fff"}}>开始使用</a>
+          </p>
+        </span>
         ),
       },
       {
