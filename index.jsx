@@ -48,19 +48,19 @@ export default class Home extends React.Component {
           key="Nav2_0"
           dataSource={Nav20DataSource}
           isMobile={this.state.isMobile}
-        />,
+        />
         <Banner3
           id="Banner3_0"
           key="Banner3_0"
           dataSource={Banner30DataSource}
           isMobile={this.state.isMobile}
-        />,
+        />
         <Content8
           id="Content8_0"
           key="Content8_0"
           dataSource={Content80DataSource}
           isMobile={this.state.isMobile}
-        />,
+        />
         <Footer2
           id="Footer2_0"
           key="Footer2_0"
@@ -70,7 +70,9 @@ export default class Home extends React.Component {
       </>
     )
     return (
-      <div className="templates-wrapper">
+      <div
+        className="templates-wrapper"
+      >
         {children}
       </div>
     );

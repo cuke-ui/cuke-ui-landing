@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from 'antd';
 import QueueAnim from 'rc-queue-anim';
 import Texty from 'rc-texty';
 import 'rc-texty/assets/index.css';
@@ -13,11 +12,7 @@ class Banner extends React.PureComponent {
     const children = dataSource.textWrapper.children.map((item) => {
       const { name, texty, ...$item } = item;
       if (name === 'button') {
-        return (
-          <Button type="primary" key={name} {...$item}>
-            {item.children}
-          </Button>
-        );
+        return item.children
       }
 
       return (
