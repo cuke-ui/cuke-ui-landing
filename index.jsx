@@ -41,43 +41,40 @@ export default class Home extends React.Component {
   }
 
   render() {
-    const children = [
-      <Nav2
-        id="Nav2_0"
-        key="Nav2_0"
-        dataSource={Nav20DataSource}
-        isMobile={this.state.isMobile}
-      />,
-      <Banner3
-        id="Banner3_0"
-        key="Banner3_0"
-        dataSource={Banner30DataSource}
-        isMobile={this.state.isMobile}
-      />,
-      <Content8
-        id="Content8_0"
-        key="Content8_0"
-        dataSource={Content80DataSource}
-        isMobile={this.state.isMobile}
-      />,
-      <Footer2
-        id="Footer2_0"
-        key="Footer2_0"
-        dataSource={Footer20DataSource}
-        isMobile={this.state.isMobile}
-      />,
-    ];
+    const children = (
+      <>
+        <Nav2
+          id="Nav2_0"
+          key="Nav2_0"
+          dataSource={Nav20DataSource}
+          isMobile={this.state.isMobile}
+        />,
+        <Banner3
+          id="Banner3_0"
+          key="Banner3_0"
+          dataSource={Banner30DataSource}
+          isMobile={this.state.isMobile}
+        />,
+        <Content8
+          id="Content8_0"
+          key="Content8_0"
+          dataSource={Content80DataSource}
+          isMobile={this.state.isMobile}
+        />,
+        <Footer2
+          id="Footer2_0"
+          key="Footer2_0"
+          dataSource={Footer20DataSource}
+          isMobile={this.state.isMobile}
+        />
+      </>
+    )
     return (
-      <div
-        className="templates-wrapper"
-        ref={(d) => {
-          this.dom = d;
-        }}
-      >
+      <div className="templates-wrapper">
         {children}
       </div>
     );
   }
 }
 
-ReactDOM.render(<Home/>, document.getElementById('root'))
+ReactDOM.render(<Home />, document.getElementById('root'))

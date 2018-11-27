@@ -2,6 +2,7 @@
   "name": "cuke-ui-landing",
   "description": "cuke-ui 官网首页",
   "scripts": {
+    "start": "webpack-dev-server",
     "build": "rm -rf dist && webpack --mode production --progress --config webpack.config.js"
   },
   "dependencies": {
@@ -51,6 +52,7 @@
     "rc-texty": "^0.2.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.26.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
   }
 }

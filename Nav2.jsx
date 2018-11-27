@@ -29,10 +29,9 @@ class Header extends React.Component {
     const { menuHeight, phoneOpen } = this.state;
     const navData = dataSource.Menu.children;
     const navChildren = Object.keys(navData).map((key, i) => (
-      <Link key={i.toString()} {...navData[key]}>
+      <a key={i.toString()} {...navData[key]} href={navData[key].to}>
         {navData[key].children}
-        }
-      </Link>
+      </a>
     ));
     return (
       <TweenOne
