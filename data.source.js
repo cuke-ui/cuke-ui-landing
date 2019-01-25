@@ -8,7 +8,7 @@ export const Nav20DataSource = {
   page: { className: 'home-page home-page home-page jnu03sdxtga-editor_css' },
   logo: {
     className: 'header2-logo joyetofhz9-editor_css',
-    children: 'https://cdn.lijinke.cn/1533557487649.png',
+    children: 'https://cdn.lijinke.cn/logo.png',
   },
   Menu: {
     className: 'header2-menu',
@@ -27,7 +27,7 @@ export const Nav20DataSource = {
       },
       {
         name: 'Content11_0',
-        to: 'https://cuke-ui.github.io/cuke-ui/?selectedKind=%E7%BB%BC%E8%BF%B0&selectedStory=%E4%BB%8B%E7%BB%8D&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel',
+        to: 'https://github.com/cuke-ui/cuke-ui',
         children: 'GITHUB',
         className: 'menu-item',
       },
@@ -126,7 +126,7 @@ export const Content80DataSource = {
           className: 'content8-block',
           img: {
             className: 'content8-img',
-            children: 'https://cdn.lijinke.cn/1387583682387727.jpg',
+            children: 'https://cdn.lijinke.cn/logo.png',
           },
           title: {
             className: 'content8-title joyedl601dd-editor_css',
@@ -155,7 +155,7 @@ export const Content80DataSource = {
           className: 'content8-block',
           img: {
             className: 'content8-img',
-            children: 'https://cdn.lijinke.cn/nande.jpg',
+            children: 'https://cdn.lijinke.cn/logo.png',
           },
           title: {
             className: 'content8-title joyedqtqmo-editor_css',
@@ -184,7 +184,7 @@ export const Content80DataSource = {
           className: 'content8-block',
           img: {
             className: 'content8-img',
-            children: 'https://cdn.lijinke.cn/noFearInMyHeart.jpg',
+            children: 'https://cdn.lijinke.cn/logo.png',
           },
           title: {
             className: 'content8-title joyedtxbexl-editor_css',
